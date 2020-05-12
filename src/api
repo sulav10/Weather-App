@@ -1,0 +1,10 @@
+ const fetchApi = () => {
+    fetch(
+      `http://api.openweathermap.org/data/2.5/weather?q=kathmandu&unit=metric&APPID=${key}`
+    ).then((response) => {
+      const data = response.json();
+      data.then((item) => {
+        console.log(item);
+      });
+    });
+  };
